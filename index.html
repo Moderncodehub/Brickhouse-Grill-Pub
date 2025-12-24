@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Brickhouse Grill & Pub | Springfield, IL</title>
+<meta name="description" content="Brickhouse Grill & Pub — Springfield, IL. Pub favorites, burgers, wings, drinks, and game day vibes." />
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --brick:#8a3b22;
+  --brick2:#c0622b;
+  --gold:#d2a24b;
+  --ink:#121212;
+  --muted:#5b5b5b;
+  --bg:#fbfaf7;
+  --card:#ffffff;
+  --line: rgba(18,18,18,.10);
+  --shadow: 0 14px 40px rgba(0,0,0,.10);
+  --shadow2: 0 26px 70px rgba(0,0,0,.12);
+  --r:22px;
+}
+
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{
+  font-family:'Manrope',sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(900px 420px at 10% -10%, rgba(210,162,75,.14), transparent 60%),
+    radial-gradient(900px 520px at 95% 0%, rgba(138,59,34,.12), transparent 62%),
+    linear-gradient(180deg, #fbfaf7, #f2ede6);
+  margin:0;
+}
+a{color:inherit; text-decoration:none;}
+.container-wide{max-width:1200px;}
+.section{padding:74px 0;}
+.section-title{
+  font-weight:950;
+  letter-spacing:-.02em;
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+  margin:0 0 10px;
+}
+.section-sub{color:var(--muted); line-height:1.75; margin:0; max-width:78ch;}
+.hr{height:1px; background:var(--line); margin:20px 0;}
+.badge-soft{
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.38rem .72rem;
+  border-radius:999px;
+  font-weight:900;
+  font-size:.9rem;
+  border:1px solid rgba(138,59,34,.18);
+  background: rgba(138,59,34,.09);
+  color: rgba(120,45,24,.95);
+}
+.btn-brand{
+  border:0;
+  background: linear-gradient(135deg,var(--gold),var(--brick2));
+  color:#1a1207;
+  font-weight:950;
+  border-radius:16px;
+  padding:.9rem 1.1rem;
+  box-shadow: 0 16px 44px rgba(210,162,75,.20);
+}
+.btn-brand:hover{filter:brightness(1.04);}
+.btn-soft{
+  border:1px solid rgba(18,18,18,.14);
+  background: rgba(255,255,255,.82);
+  color:var(--ink);
+  font-weight:950;
+  border-radius:16px;
+  padding:.9rem 1.1rem;
+}
+.btn-soft:hover{background:#fff;}
+.card-soft{
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(18,18,18,.08);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+}
+.card-pad{padding:26px;}
+.small-muted{color:var(--muted);}
+
+/* NAV */
+.nav-wrap{
+  position:sticky; top:0; z-index:50;
+  background: rgba(251,250,247,.86);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid rgba(18,18,18,.08);
+}
+.brand-mark{
+  width:44px; height:44px;
+  border-radius:14px;
+  display:grid; place-items:center;
+  color:#fff; font-weight:950; letter-spacing:.5px;
+  background: linear-gradient(135deg,var(--brick),var(--brick2));
+  box-shadow: 0 14px 35px rgba(138,59,34,.20);
+}
+.navbar-brand .title{font-weight:950; letter-spacing:-.02em; line-height:1;}
+.navbar-brand .sub{color:var(--muted); font-size:.92rem; line-height:1.1;}
+.nav-link{
+  font-weight:950;
+  color: rgba(18,18,18,.72) !important;
+  padding:.55rem .9rem !important;
+  border-radius:999px;
+}
+.nav-link:hover{background: rgba(138,59,34,.08);}
+.nav-link.active{
+  background: rgba(138,59,34,.12);
+  border: 1px solid rgba(138,59,34,.18);
+}
+.btn-call{
+  background: linear-gradient(135deg,var(--brick),var(--brick2));
+  color:#fff !important;
+  font-weight:950;
+  border-radius:999px;
+  padding:.62rem 1rem;
+  box-shadow: 0 14px 35px rgba(138,59,34,.18);
+  white-space:nowrap;
+}
+
+/* FULL-WIDTH HERO */
+.hero{
+  position:relative;
+  width:100vw;
+  min-height: 86vh;
+  margin-left: calc(50% - 50vw);
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.74) 0%, rgba(0,0,0,.44) 45%, rgba(0,0,0,.20) 100%),
+    url("https://files.idss.com/C116/1ed7c670-4725-46ed-abbc-749758455a16/b5aa9e75-1225-45e7-9d32-4efcb5f7b87f.jpg");
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  align-items:center;
+}
+.hero-inner{
+  max-width:1200px;
+  width:100%;
+  margin:0 auto;
+  padding: 0 22px;
+  color:#fff;
+}
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  padding:.52rem .95rem;
+  border-radius:999px;
+  font-weight:950;
+  background: rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.26);
+  backdrop-filter: blur(10px);
+}
+.hero h1{
+  font-size: clamp(2.5rem, 5.2vw, 4.3rem);
+  font-weight: 990;
+  letter-spacing:-.03em;
+  line-height:1.03;
+  margin: 1rem 0 .8rem;
+}
+.hero p{
+  max-width: 700px;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,.88);
+}
+.hero-cta{
+  display:flex; gap:12px; flex-wrap:wrap;
+  margin-top: 22px;
+}
+.hero .btn-brand{box-shadow: 0 18px 55px rgba(210,162,75,.22);}
+.hero .btn-soft{
+  background: rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.26);
+  color: rgba(255,255,255,.92);
+}
+.hero .btn-soft:hover{background: rgba(255,255,255,.18);}
+
+/* hero bottom info */
+.hero-info{
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  bottom: 24px;
+  max-width:1200px;
+  width: calc(100% - 44px);
+  display:grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 12px;
+}
+.hero-info-card{
+  background: rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.26);
+  border-radius: 18px;
+  padding: 14px 16px;
+  color:#fff;
+  backdrop-filter: blur(12px);
+}
+.hero-info-card strong{display:block; font-weight:950; margin-bottom:2px;}
+.hero-info-card a{color:#fff; text-decoration:underline;}
+
+/* MENU */
+.menu-tabs{
+  display:flex; gap:10px; flex-wrap:wrap;
+}
+.pill{
+  border:1px solid rgba(18,18,18,.12);
+  background: rgba(255,255,255,.8);
+  border-radius: 999px;
+  padding: .5rem .85rem;
+  font-weight:950;
+  color: rgba(18,18,18,.76);
+  cursor:pointer;
+  user-select:none;
+}
+.pill.active{
+  background: rgba(138,59,34,.12);
+  border-color: rgba(138,59,34,.18);
+  color: rgba(120,45,24,.95);
+}
+.menu-grid{margin-top: 18px;}
+.menu-item{
+  height:100%;
+  padding: 18px 18px;
+  border-radius: 18px;
+  border:1px solid rgba(18,18,18,.08);
+  background:#fff;
+  box-shadow: 0 12px 34px rgba(0,0,0,.08);
+}
+.menu-item .top{
+  display:flex; justify-content:space-between; align-items:flex-start; gap:12px;
+}
+.menu-item h6{margin:0; font-weight:950;}
+.menu-item .desc{color:var(--muted); margin:.4rem 0 0; line-height:1.6;}
+.price{
+  font-weight:950;
+  padding:.32rem .55rem;
+  border-radius: 12px;
+  background: rgba(210,162,75,.18);
+  border:1px solid rgba(210,162,75,.22);
+  color: rgba(90,60,10,.95);
+  white-space:nowrap;
+}
+.tagline{
+  font-size:.88rem;
+  color: rgba(18,18,18,.62);
+  margin-top: 10px;
+}
+
+/* Specials */
+.special-card{
+  padding: 20px 20px;
+  border-radius: 18px;
+  border:1px solid rgba(18,18,18,.08);
+  background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.88));
+  box-shadow: 0 12px 34px rgba(0,0,0,.08);
+  height:100%;
+}
+.special-card strong{font-weight:950;}
+.special-card .when{
+  display:inline-flex; align-items:center; gap:.4rem;
+  font-weight:900;
+  font-size:.9rem;
+  border-radius:999px;
+  padding:.34rem .62rem;
+  border:1px solid rgba(138,59,34,.18);
+  background: rgba(138,59,34,.09);
+  color: rgba(120,45,24,.95);
+  margin-top: 10px;
+}
+
+/* Gallery */
+.gallery img{
+  width:100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 18px;
+  border:1px solid rgba(18,18,18,.08);
+  box-shadow: 0 12px 34px rgba(0,0,0,.10);
+  background:#fff;
+}
+
+/* Form */
+.form-control{
+  border-radius:16px;
+  border:1px solid rgba(18,18,18,.14);
+  padding:.95rem .95rem;
+}
+.form-control:focus{
+  border-color: rgba(138,59,34,.35);
+  box-shadow: 0 0 0 .2rem rgba(138,59,34,.14);
+}
+/* ===== Floating Order Now Button ===== */
+.order-float{
+  position: fixed;
+  right: 18px;
+  bottom: 92px; /* sits above mobile bar */
+  z-index: 70;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 999px;
+  font-weight: 950;
+  color: #1a1207;
+  background: linear-gradient(135deg, var(--gold), var(--brick2));
+  border: 1px solid rgba(210,162,75,.28);
+  box-shadow: 0 18px 55px rgba(210,162,75,.22);
+  transition: transform .18s ease, filter .18s ease;
+}
+.order-float:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.02);
+}
+.order-float small{
+  font-weight: 900;
+  opacity: .85;
+  margin-left: 2px;
+}
+
+/* On desktop, move it up slightly */
+@media(min-width: 992px){
+  .order-float{ bottom: 24px; }
+}
+
+/* ===== Hours Card Layout ===== */
+.hours-card{
+  background:#fff;
+  border:1px solid rgba(18,18,18,.08);
+  border-radius:18px;
+  padding: 18px 18px;
+  box-shadow: 0 12px 34px rgba(0,0,0,.08);
+}
+.hours-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding: 10px 10px;
+  border-radius:14px;
+}
+.hours-row + .hours-row{ margin-top: 6px; }
+.hours-row .day{ font-weight: 950; }
+.hours-row .time{ color: var(--muted); font-weight: 800; }
+
+.hours-row.today{
+  background: rgba(138,59,34,.10);
+  border:1px solid rgba(138,59,34,.16);
+}
+.hours-row.today .time{ color: rgba(120,45,24,.95); }
+.hours-note{
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: .92rem;
+  line-height: 1.6;
+}
+
+
+/* Footer */
+footer{
+  padding: 28px 0;
+  border-top:1px solid rgba(18,18,18,.10);
+  background: rgba(251,250,247,.86);
+  backdrop-filter: blur(10px);
+  color: rgba(18,18,18,.70);
+}
+
+/* Sticky mobile bar */
+.mobile-bar{
+  position: fixed;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 60;
+  display:none;
+}
+.mobile-bar-inner{
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(18,18,18,.10);
+  border-radius: 18px;
+  box-shadow: var(--shadow2);
+  padding: 10px;
+  display:flex;
+  gap:10px;
+}
+.mobile-bar a{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  font-weight:950;
+  border-radius: 14px;
+  padding: 12px 10px;
+}
+.mobile-call{background: linear-gradient(135deg,var(--brick),var(--brick2)); color:#fff;}
+.mobile-menu{background: rgba(210,162,75,.18); border:1px solid rgba(210,162,75,.22); color: rgba(90,60,10,.95);}
+
+@media(max-width: 991.98px){
+  .hero{min-height: 92vh;}
+  .hero-info{grid-template-columns:1fr;}
+  .mobile-bar{display:block;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <div class="container container-wide">
+    <nav class="navbar navbar-expand-lg py-3">
+      <a class="navbar-brand d-flex align-items-center gap-3" href="#top">
+        <div class="brand-mark">BH</div>
+        <div>
+          <div class="title">Brickhouse Grill & Pub</div>
+          <div class="sub">3136 W Iles Ave • Springfield, IL</div>
+        </div>
+      </a>
+
+      <button class="navbar-toggler btn-soft py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 mt-3 mt-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#specials">Specials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-call" href="tel:+12175462745">Call (217) 546-2745</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO (FULL WIDTH) -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <span class="hero-badge">🍔 Pub Food • 🍺 Drinks • 🏈 Game Day</span>
+
+    <h1>Brickhouse Grill &amp; Pub<br>Food, drinks & good times.</h1>
+
+    <p>
+      This is a demo redesign: modern layout, full-width hero image, menu cards,
+      daily specials, events, reviews, and easy call/directions for customers.
+    </p>
+
+    <div class="hero-cta">
+      <a class="btn btn-brand" href="#menu">Explore Menu</a>
+      <a class="btn btn-soft" href="#contact">Hours & Location</a>
+      <button class="btn btn-soft" data-bs-toggle="modal" data-bs-target="#reserveModal">Request Reservation</button>
+    </div>
+  </div>
+
+  <div class="hero-info">
+    <div class="hero-info-card">
+      <strong>📍 Location</strong>
+      3136 W Iles Ave, Springfield, IL 62704
+      <div class="mt-1">
+        <a target="_blank" rel="noopener" href="https://www.google.com/maps?q=3136+W+Iles+Ave,+Springfield,+IL+62704">Get directions →</a>
+      </div>
+    </div>
+    <div class="hero-info-card">
+      <strong>⏰ Hours (Demo)</strong>
+      Open Daily · 11 AM – 1 AM
+      <div class="mt-1 small" style="opacity:.9;">Update to exact hours in final build.</div>
+    </div>
+    <div class="hero-info-card">
+      <strong>📞 Call</strong>
+      <a href="tel:+12175462745">(217) 546-2745</a>
+      <div class="mt-1 small" style="opacity:.9;">Tap to call instantly</div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="section" id="menu">
+  <div class="container container-wide">
+    <div class="d-flex justify-content-between align-items-end flex-wrap gap-2">
+      <div>
+        <div class="badge-soft">🍽️ Menu</div>
+        <h2 class="section-title mt-2">Popular Picks</h2>
+        <p class="section-sub">Menu cards that look great on mobile — easy to browse and fast for customers.</p>
+      </div>
+      <div class="d-flex gap-2 flex-wrap">
+        <button class="btn btn-soft" data-bs-toggle="modal" data-bs-target="#fullMenuModal">View Full Menu</button>
+        <a class="btn btn-brand" href="tel:+12175462745">Order by Phone</a>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+
+    <!-- category pills -->
+    <div class="menu-tabs" id="menuTabs">
+      <span class="pill active" data-cat="all">All</span>
+      <span class="pill" data-cat="starters">Starters</span>
+      <span class="pill" data-cat="burgers">Burgers</span>
+      <span class="pill" data-cat="wings">Wings</span>
+      <span class="pill" data-cat="salads">Salads</span>
+      <span class="pill" data-cat="entrees">Entrees</span>
+      <span class="pill" data-cat="drinks">Drinks</span>
+    </div>
+
+    <div class="row g-3 menu-grid" id="menuGrid">
+      <!-- Starters -->
+      <div class="col-md-6 col-lg-4 menu-card" data-cat="starters">
+        <div class="menu-item">
+          <div class="top">
+            <div>
+              <h6>Loaded Nachos</h6>
+              <p class="desc">Crispy chips, cheese, jalapeños, pico, and house sauce.</p>
+            </div>
+            <div class="price">$12</div>
+          </div>
+          <div class="tagline">Add chicken +$3</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 menu-card" data-cat="starters">
+        <div class="menu-item">
+          <div class="top">
+            <div>
+              <h6>Mozzarella Sticks</h6>
+              <p class="desc">Golden fried, served with marinara.</p>
+            </div>
+            <div class="price">$9</div>
+          </div>
+          <div class="tagline">Perfect starter</div>
+        </div>
+      </div>
+
+      <!-- Burgers -->
+      <div class="col-md-6 col-lg-4 menu-card" data-cat="burgers">
+        <div class="menu-item">
+          <div class="top">
+            <div>
+              <h6>Brickhouse Classic Burger</h6>
+              <p class="desc">Cheddar, lettuce, tomato, onion, pickles, brioche bun.</p>
+            </div>
+            <div class="price">$14</div>
+          </div>
+          <div class="tagline">Served with fries</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 menu-card" data-cat="burgers">
+        <div class="menu-item">
+          <div class="top">
+            <div>
+              <h6>Bacon BBQ Burger</h6>
+              <p class="desc">Crispy bacon, BBQ sauce, cheddar, onion rings.</p>
+            </div>
+            <div class="price">$16</div>
+          </div>
+          <div class="tagline">Fan favorite</div>
+        </div>
+      </div>
+
+      <!-- Wings -->
+      <div class="col-md-6 col-lg-4 menu-card" data-cat="wings">
+        <div class="menu-item">
+          <div class="top">
+            <div>
+              <h6>Buffalo Wings (10pc)</h6>
+              <p class="desc">Classic buffalo, ranch or blue cheese.</p>
+            </div>
+            <div class="price">$15</div>
+          </div>
+          <div class="tagline">Sauces: Buffalo • BBQ • Garlic Parm</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 menu-card" data-cat="wings">
+        <div class="menu-item">
+          <div class="top">
+            <div>
+              <h6>Boneless Wings</h6>
+              <p class="desc">Crispy bites tossed in your favorite sauce.</p>
+            </div>
+            <div class="price">$13</div>
+          </div>
+          <div class="tagline">Great for game day</div>
+        </div>
+      </div>
+
+      <!-- Salads -->
+      <div class="col-md-6 col-lg-4 menu-card" data-cat="salads">
+        <div class="menu-item">
+          <div class="top">
+            <div>
+              <h6>Chicken Caesar</h6>
+              <p class="desc">Romaine, parmesan, croutons, caesar dressing.</p>
+            </div>
+            <div class="price">$13</div>
+          </div>
+          <div class="tagline">Light + filling</div>
+        </div>
+      </div>
+
+      <!-- Entrees -->
+      <div class="col-md-6 col-lg-4 menu-card" data-cat="entrees">
+        <div class="menu-item">
+          <div class="top">
+            <div>
+              <h6>Fish & Chips</h6>
+              <p class="desc">Beer-battered fish, fries, tartar sauce.</p>
+            </div>
+            <div class="price">$17</div>
+          </div>
+          <div class="tagline">Classic pub plate</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 menu-card" data-cat="entrees">
+        <div class="menu-item">
+          <div class="top">
+            <div>
+              <h6>Chicken Tenders</h6>
+              <p class="desc">Crispy tenders with fries and dipping sauce.</p>
+            </div>
+            <div class="price">$14</div>
+          </div>
+          <div class="tagline">Kids + adults love it</div>
+        </div>
+      </div>
+
+      <!-- Drinks -->
+      <div class="col-md-6 col-lg-4 menu-card" data-cat="drinks">
+        <div class="menu-item">
+          <div class="top">
+            <div>
+              <h6>Signature Margarita</h6>
+              <p class="desc">House blend, fresh lime, salted rim.</p>
+            </div>
+            <div class="price">$10</div>
+          </div>
+          <div class="tagline">Ask about flavors</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 menu-card" data-cat="drinks">
+        <div class="menu-item">
+          <div class="top">
+            <div>
+              <h6>Draft Beer</h6>
+              <p class="desc">Rotating taps — local + favorites.</p>
+            </div>
+            <div class="price">$6</div>
+          </div>
+          <div class="tagline">Cold & fresh</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4 small-muted">
+      *Demo menu items/prices are placeholders. Final site will use Brickhouse’s official menu.
+    </div>
+  </div>
+</section>
+<!-- Floating Order Button -->
+<a class="order-float" href="#" data-bs-toggle="modal" data-bs-target="#orderModal" aria-label="Order Now">
+  🛒 Order Now <small>(Demo)</small>
+</a>
+
+<!-- Order Now Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius:22px;">
+      <div class="modal-header" style="border-bottom:1px solid rgba(18,18,18,.10);">
+        <h5 class="modal-title" style="font-weight:950;">Order Online (Demo)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <p class="small-muted">
+          In the final site, this can link to DoorDash / UberEats / Toast / Clover
+          or a built-in ordering system.
+        </p>
+
+        <div class="d-grid gap-2">
+          <a class="btn btn-brand" href="#" onclick="return false;">DoorDash (placeholder)</a>
+          <a class="btn btn-soft" href="#" onclick="return false;">Uber Eats (placeholder)</a>
+          <a class="btn btn-soft" href="#" onclick="return false;">Toast Online Ordering (placeholder)</a>
+        </div>
+
+        <div class="mt-3 small-muted">
+          Or customers can call to order:
+          <a href="tel:+12175462745" style="text-decoration:underline;">(217) 546-2745</a>
+        </div>
+      </div>
+
+      <div class="modal-footer" style="border-top:1px solid rgba(18,18,18,.10);">
+        <button class="btn btn-soft" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SPECIALS -->
+<section class="section" id="specials">
+  <div class="container container-wide">
+    <div class="d-flex justify-content-between align-items-end flex-wrap gap-2">
+      <div>
+        <div class="badge-soft">⭐ Specials</div>
+        <h2 class="section-title mt-2">Daily Specials</h2>
+        <p class="section-sub">A simple section the owner can update weekly (easy to keep customers coming back).</p>
+      </div>
+      <a class="btn btn-brand" href="#contact">Ask About Catering</a>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-3">
+        <div class="special-card">
+          <strong>Monday</strong>
+          <div class="mt-2">Burger + Fries Deal</div>
+          <div class="when">⏱️ All Day</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="special-card">
+          <strong>Tuesday</strong>
+          <div class="mt-2">Taco Night</div>
+          <div class="when">🌮 5–9 PM</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="special-card">
+          <strong>Wednesday</strong>
+          <div class="mt-2">Wing Special</div>
+          <div class="when">🔥 6–10 PM</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="special-card">
+          <strong>Friday</strong>
+          <div class="mt-2">Fish & Chips</div>
+          <div class="when">🐟 Evening</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS / HAPPY HOUR -->
+<section class="section" id="events">
+  <div class="container container-wide">
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-7">
+        <div class="card-soft card-pad h-100">
+          <div class="badge-soft">📅 Events</div>
+          <h2 class="section-title mt-2">Happy Hour & Game Day</h2>
+          <p class="section-sub mb-4">
+            Promote what makes Brickhouse special: happy hour, game day specials, and weekly events.
+          </p>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="menu-item">
+                <div class="top">
+                  <div>
+                    <h6>Happy Hour</h6>
+                    <p class="desc">Drink specials + appetizers — bring the crowd after work.</p>
+                  </div>
+                  <div class="price">3–6</div>
+                </div>
+                <div class="tagline">Weekdays (demo)</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="menu-item">
+                <div class="top">
+                  <div>
+                    <h6>Game Day Specials</h6>
+                    <p class="desc">Wings, beer buckets, and big-screen vibes.</p>
+                  </div>
+                  <div class="price">NFL</div>
+                </div>
+                <div class="tagline">Sundays (demo)</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="menu-item">
+                <div class="top">
+                  <div>
+                    <h6>Trivia Night</h6>
+                    <p class="desc">Teams, prizes, and fun — a weekly regular.</p>
+                  </div>
+                  <div class="price">7 PM</div>
+                </div>
+                <div class="tagline">Thursdays (demo)</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="menu-item">
+                <div class="top">
+                  <div>
+                    <h6>Live Music</h6>
+                    <p class="desc">Featured local talent with dinner + drinks.</p>
+                  </div>
+                  <div class="price">8 PM</div>
+                </div>
+                <div class="tagline">Saturdays (demo)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 d-flex gap-2 flex-wrap">
+            <button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#eventsModal">Post Upcoming Events</button>
+            <a class="btn btn-soft" href="#contact">Promote an Event</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card-soft card-pad h-100">
+          <div class="badge-soft">🎉 Private Parties</div>
+          <h3 class="section-title mt-2" style="font-size:1.45rem;">Book a table or group night</h3>
+          <p class="section-sub">
+            Add a quick request form for reservations, parties, or catering leads.
+            (In the final site this can email the manager.)
+          </p>
+
+          <div class="hr"></div>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <button class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#reserveModal">Request Reservation</button>
+            <a class="btn btn-soft" href="tel:+12175462745">Call to Book</a>
+          </div>
+
+          <div class="mt-4 small-muted">
+            *Demo feature — can connect to email, Google Calendar, or a booking tool in the final build.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section" id="reviews">
+  <div class="container container-wide">
+    <div class="d-flex justify-content-between align-items-end flex-wrap gap-2">
+      <div>
+        <div class="badge-soft">💬 Reviews</div>
+        <h2 class="section-title mt-2">What customers say</h2>
+        <p class="section-sub">Testimonials build trust fast — especially on mobile.</p>
+      </div>
+      <a class="btn btn-soft" target="_blank" href="https://www.google.com/search?q=Brickhouse+Grill+%26+Pub+Springfield+IL+reviews">View Google Reviews</a>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-4">
+        <div class="card-soft card-pad h-100">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong style="font-weight:950;">“Great wings and cold beer.”</strong>
+            <span class="badge-soft">★★★★★</span>
+          </div>
+          <p class="small-muted mt-3 mb-0">Perfect spot for game day. Service was quick and friendly.</p>
+          <div class="mt-3 small-muted">— Customer Name</div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-soft card-pad h-100">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong style="font-weight:950;">“Burgers were amazing.”</strong>
+            <span class="badge-soft">★★★★★</span>
+          </div>
+          <p class="small-muted mt-3 mb-0">Great portions and a fun atmosphere. Will be back.</p>
+          <div class="mt-3 small-muted">— Customer Name</div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-soft card-pad h-100">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong style="font-weight:950;">“Nice place for families.”</strong>
+            <span class="badge-soft">★★★★★</span>
+          </div>
+          <p class="small-muted mt-3 mb-0">Good food, clean, and plenty of seating. Loved it.</p>
+          <div class="mt-3 small-muted">— Customer Name</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section" id="gallery">
+  <div class="container container-wide">
+    <div class="d-flex justify-content-between align-items-end flex-wrap gap-2">
+      <div>
+        <div class="badge-soft">📷 Gallery</div>
+        <h2 class="section-title mt-2">Food & Atmosphere</h2>
+        <p class="section-sub">Replace these with Brickhouse’s real photos for the final launch.</p>
+      </div>
+      <button class="btn btn-soft" data-bs-toggle="modal" data-bs-target="#galleryTipModal">Photo Tips</button>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="row g-3 gallery">
+      <div class="col-md-6 col-lg-3"><img src="http://www.brickhousegrill.net/files/block/bImgURL/size280x280/Brickhouse_pic-1.jpg" alt="Gallery image 1"></div>
+      <div class="col-md-6 col-lg-3"><img src="http://www.brickhousegrill.net/files/block/bImgURL/size280x280/Screen%20Shot%202024-08-07%20at%201.57.30%20PM.png" alt="Gallery image 2"></div>
+      <div class="col-md-6 col-lg-3"><img src="http://www.brickhousegrill.net/files/block/bImgURL/size280x280/Screen%20Shot%202024-08-07%20at%201.49.47%20PM1.png" alt="Gallery image 3"></div>
+      <div class="col-md-6 col-lg-3"><img src="http://www.brickhousegrill.net/files/block/bImgURL/size280x280/Brickhouse_pic-4.jpg" alt="Gallery image 4"></div>
+    </div>
+
+    <div class="mt-4 small-muted">
+      Tip: use 10–15 high-quality photos: burgers, wings, bar, dining room, patio, and events.
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container container-wide">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card-soft card-pad h-100">
+          <div class="badge-soft">📍 Contact</div>
+          <h2 class="section-title mt-2">Hours & Location</h2>
+          <p class="section-sub">Make it easy for customers to call and get directions in one tap.</p>
+
+          <div class="hr"></div>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="menu-item">
+                <div class="top">
+                  <div>
+                    <h6>Phone</h6>
+                    <p class="desc mb-0"><a href="tel:+12175462745">(217) 546-2745</a></p>
+                  </div>
+                  <div class="price">Call</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="menu-item">
+                <div class="top">
+                  <div>
+                    <h6>Address</h6>
+                    <p class="desc mb-0">3136 W Iles Ave, Springfield, IL</p>
+                  </div>
+                  <div class="price">Map</div>
+                </div>
+                <div class="tagline">
+                  <a target="_blank" rel="noopener"
+                     href="https://www.google.com/maps?q=3136+W+Iles+Ave,+Springfield,+IL+62704"
+                     style="text-decoration:underline;">Open directions →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+<div class="hours-card">
+  <div class="d-flex align-items-center justify-content-between mb-2">
+    <h6 class="m-0" style="font-weight:950;">Hours</h6>
+    <span class="badge-soft">Demo</span>
+  </div>
+
+  <div class="hours-row" data-day="0">
+    <div class="day">Sunday</div>
+    <div class="time">11:00 AM – 1:00 AM</div>
+  </div>
+  <div class="hours-row" data-day="1">
+    <div class="day">Monday</div>
+    <div class="time">11:00 AM – 1:00 AM</div>
+  </div>
+  <div class="hours-row" data-day="2">
+    <div class="day">Tuesday</div>
+    <div class="time">11:00 AM – 1:00 AM</div>
+  </div>
+  <div class="hours-row" data-day="3">
+    <div class="day">Wednesday</div>
+    <div class="time">11:00 AM – 1:00 AM</div>
+  </div>
+  <div class="hours-row" data-day="4">
+    <div class="day">Thursday</div>
+    <div class="time">11:00 AM – 1:00 AM</div>
+  </div>
+  <div class="hours-row" data-day="5">
+    <div class="day">Friday</div>
+    <div class="time">11:00 AM – 2:00 AM</div>
+  </div>
+  <div class="hours-row" data-day="6">
+    <div class="day">Saturday</div>
+    <div class="time">11:00 AM – 2:00 AM</div>
+  </div>
+
+  <div class="hours-note">
+    Today is highlighted automatically. Final site will use Brickhouse official hours.
+  </div>
+</div>
+
+           
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card-soft card-pad h-100">
+          <div class="badge-soft">✉️ Message</div>
+          <h2 class="section-title mt-2">Send a quick message</h2>
+          <p class="section-sub">Demo form (shows success). Final site can email the owner/manager.</p>
+
+          <div class="hr"></div>
+
+          <form onsubmit="return demoSubmit(event)">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Name</label>
+                <input class="form-control" required placeholder="Your name" />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Phone or Email</label>
+                <input class="form-control" required placeholder="(217) or email" />
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-bold">Message</label>
+                <textarea class="form-control" rows="4" required placeholder="How can we help?"></textarea>
+              </div>
+              <div class="col-12 d-flex gap-2 flex-wrap align-items-center">
+                <button class="btn btn-brand" type="submit">Send Message</button>
+                <span id="formNote" class="small-muted"></span>
+              </div>
+            </div>
+          </form>
+
+          <div class="mt-4 d-flex gap-2 flex-wrap">
+            <button class="btn btn-soft" data-bs-toggle="modal" data-bs-target="#reserveModal">Request Reservation</button>
+            <a class="btn btn-soft" href="tel:+12175462745">Call Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="
+  border-top:1px solid rgba(18,18,18,.10);
+  background: rgba(251,250,247,.90);
+  backdrop-filter: blur(10px);
+">
+  <div class="container container-wide py-4">
+    <div class="row g-3 align-items-center">
+
+      <!-- Left -->
+      <div class="col-lg-6">
+        <div class="d-flex align-items-center gap-3 flex-wrap">
+          <div style="
+            width:44px;height:44px;border-radius:14px;
+            display:grid;place-items:center;
+            background: linear-gradient(135deg,#8a3b22,#c0622b);
+            color:#fff;font-weight:950;letter-spacing:.4px;
+            box-shadow: 0 14px 35px rgba(138,59,34,.18);
+          ">BH</div>
+
+          <div>
+            <div style="font-weight:950; letter-spacing:-.02em;">Brickhouse Grill &amp; Pub</div>
+            <div style="color:rgba(18,18,18,.65); font-weight:800; font-size:.92rem;">
+              © <span id="year"></span> • All rights reserved
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="col-lg-6">
+        <div class="d-flex justify-content-lg-end align-items-center gap-2 flex-wrap">
+          <a href="#menu" class="px-3 py-2" style="
+            border-radius:999px;
+            border:1px solid rgba(18,18,18,.12);
+            background: rgba(255,255,255,.75);
+            font-weight:900;
+            color: rgba(18,18,18,.76);
+          ">Menu</a>
+
+          <a href="#contact" class="px-3 py-2" style="
+            border-radius:999px;
+            border:1px solid rgba(18,18,18,.12);
+            background: rgba(255,255,255,.75);
+            font-weight:900;
+            color: rgba(18,18,18,.76);
+          ">Contact</a>
+
+          <div class="px-3 py-2" style="
+            border-radius:999px;
+            border:1px solid rgba(138,59,34,.16);
+            background: rgba(138,59,34,.08);
+            font-weight:900;
+            color: rgba(120,45,24,.95);
+          ">
+            Demo redesign by
+            <a href="https://moderncodehub.com" target="_blank" rel="noopener"
+               style="text-decoration:underline; font-weight:950;">
+              Modern Code Hub
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom line -->
+    <div class="mt-3 d-flex justify-content-between align-items-center flex-wrap gap-2"
+         style="color:rgba(18,18,18,.62); font-size:.92rem;">
+      <div>3136 W Iles Ave • Springfield, IL</div>
+      <div>
+        Built for demo •
+        <a href="#top" style="text-decoration:underline; font-weight:900;">Back to top ↑</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Sticky mobile bar -->
+<div class="mobile-bar" aria-hidden="false">
+  <div class="mobile-bar-inner">
+    <a class="mobile-call" href="tel:+12175462745">📞 Call</a>
+    <a class="mobile-menu" href="#menu">🍔 Menu</a>
+  </div>
+</div>
+
+<!-- ===== MODALS ===== -->
+
+<!-- Reservation Modal -->
+<div class="modal fade" id="reserveModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius:22px;">
+      <div class="modal-header" style="border-bottom:1px solid rgba(18,18,18,.10);">
+        <h5 class="modal-title" style="font-weight:950;">Request a Reservation (Demo)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p class="small-muted">Demo only — final site can email the request to the manager.</p>
+        <form onsubmit="return reserveSubmit(event)">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Name</label>
+              <input class="form-control" required placeholder="Name" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Phone</label>
+              <input class="form-control" required placeholder="Phone" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Date</label>
+              <input class="form-control" type="date" required />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Time</label>
+              <input class="form-control" type="time" required />
+            </div>
+            <div class="col-12">
+              <label class="form-label fw-bold">Party Size</label>
+              <select class="form-control" required>
+                <option value="">Select…</option>
+                <option>2</option><option>3</option><option>4</option><option>5</option>
+                <option>6</option><option>7</option><option>8+</option>
+              </select>
+            </div>
+            <div class="col-12 d-flex gap-2 flex-wrap align-items-center">
+              <button class="btn btn-brand" type="submit">Submit Request</button>
+              <span id="reserveNote" class="small-muted"></span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer" style="border-top:1px solid rgba(18,18,18,.10);">
+        <button class="btn btn-soft" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Full Menu Modal -->
+<div class="modal fade" id="fullMenuModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:22px;">
+      <div class="modal-header" style="border-bottom:1px solid rgba(18,18,18,.10);">
+        <h5 class="modal-title" style="font-weight:950;">Full Menu (Demo)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p class="small-muted">This is a demo layout. Final content will match Brickhouse’s official menu.</p>
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="card-soft card-pad">
+              <h6 style="font-weight:950;">Starters</h6>
+              <ul class="small-muted mb-0">
+                <li>Nachos</li>
+                <li>Mozzarella Sticks</li>
+                <li>Onion Rings</li>
+                <li>Loaded Fries</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-soft card-pad">
+              <h6 style="font-weight:950;">Burgers & Sandwiches</h6>
+              <ul class="small-muted mb-0">
+                <li>Classic Burger</li>
+                <li>Bacon BBQ Burger</li>
+                <li>Chicken Sandwich</li>
+                <li>Club Sandwich</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-soft card-pad">
+              <h6 style="font-weight:950;">Entrees</h6>
+              <ul class="small-muted mb-0">
+                <li>Fish & Chips</li>
+                <li>Chicken Tenders</li>
+                <li>Pasta Special</li>
+                <li>Steak Night</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-soft card-pad">
+              <h6 style="font-weight:950;">Drinks</h6>
+              <ul class="small-muted mb-0">
+                <li>Draft Beer</li>
+                <li>Signature Margarita</li>
+                <li>House Cocktails</li>
+                <li>Wine & Spirits</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer" style="border-top:1px solid rgba(18,18,18,.10);">
+        <button class="btn btn-soft" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Events Modal -->
+<div class="modal fade" id="eventsModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius:22px;">
+      <div class="modal-header" style="border-bottom:1px solid rgba(18,18,18,.10);">
+        <h5 class="modal-title" style="font-weight:950;">Upcoming Events (Demo)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="menu-item">
+          <div class="top">
+            <div>
+              <h6>Trivia Night</h6>
+              <p class="desc mb-0">Teams, prizes, and great food.</p>
+            </div>
+            <div class="price">Thu</div>
+          </div>
+        </div>
+        <div class="mt-3 menu-item">
+          <div class="top">
+            <div>
+              <h6>Live Music</h6>
+              <p class="desc mb-0">Local talent + weekend vibes.</p>
+            </div>
+            <div class="price">Sat</div>
+          </div>
+        </div>
+        <div class="mt-3 small-muted">Final site: add dates, flyers, and social links.</div>
+      </div>
+      <div class="modal-footer" style="border-top:1px solid rgba(18,18,18,.10);">
+        <button class="btn btn-soft" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Gallery Tips Modal -->
+<div class="modal fade" id="galleryTipModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius:22px;">
+      <div class="modal-header" style="border-bottom:1px solid rgba(18,18,18,.10);">
+        <h5 class="modal-title" style="font-weight:950;">Photo Tips</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="small-muted mb-0">
+          <li>Use 10–15 bright, high-quality photos.</li>
+          <li>Include burgers, wings, appetizers, bar, dining area, and events.</li>
+          <li>Take 2–3 wide shots of the interior for the hero and gallery.</li>
+          <li>Final site can compress images for fast load.</li>
+        </ul>
+      </div>
+      <div class="modal-footer" style="border-top:1px solid rgba(18,18,18,.10);">
+        <button class="btn btn-soft" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Demo form submit
+  function demoSubmit(e){
+    e.preventDefault();
+    const note = document.getElementById('formNote');
+    note.textContent = "✅ Demo: Message sent (final site can email the owner).";
+    setTimeout(()=> note.textContent="", 4500);
+    e.target.reset();
+    return false;
+  }
+
+  function reserveSubmit(e){
+    e.preventDefault();
+    const note = document.getElementById('reserveNote');
+    note.textContent = "✅ Demo: Reservation request submitted.";
+    setTimeout(()=> note.textContent="", 4500);
+    e.target.reset();
+    return false;
+  }
+
+  // Smooth scroll (nav + anchors)
+  document.querySelectorAll('a.nav-link, a[href^="#"]').forEach(link=>{
+    link.addEventListener('click', (ev)=>{
+      const href = link.getAttribute('href');
+      if(href && href.startsWith('#') && href.length > 1){
+        const el = document.querySelector(href);
+        if(el){
+          ev.preventDefault();
+          el.scrollIntoView({behavior:'smooth', block:'start'});
+          // close mobile nav if open
+          const nav = document.getElementById('navMain');
+          if(nav && nav.classList.contains('show')){
+            new bootstrap.Collapse(nav).toggle();
+          }
+        }
+      }
+    });
+  });
+
+  // Active nav highlight
+  const navLinks = [...document.querySelectorAll('.nav-link')];
+  const sections = navLinks
+    .map(a => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+
+  function setActiveNav(){
+    const y = window.scrollY + 170;
+    let currentId = '';
+    sections.forEach(sec=>{
+      if(sec.offsetTop <= y) currentId = sec.id;
+    });
+    navLinks.forEach(a=>{
+      const target = (a.getAttribute('href')||'').replace('#','');
+      a.classList.toggle('active', target && target === currentId);
+    });
+  }
+  window.addEventListener('scroll', setActiveNav);
+  setActiveNav();
+
+  // Menu filter
+  const pills = document.querySelectorAll('#menuTabs .pill');
+  const cards = document.querySelectorAll('#menuGrid .menu-card');
+
+  function filterMenu(cat){
+    cards.forEach(c=>{
+      const ccat = c.getAttribute('data-cat');
+      const show = (cat === 'all' || ccat === cat);
+      c.style.display = show ? '' : 'none';
+    });
+  }
+
+  pills.forEach(p=>{
+    p.addEventListener('click', ()=>{
+      pills.forEach(x=>x.classList.remove('active'));
+      p.classList.add('active');
+      filterMenu(p.getAttribute('data-cat'));
+    });
+  });
+
+  // Highlight today's hours row
+(function(){
+  const today = new Date().getDay(); // 0=Sun ... 6=Sat
+  document.querySelectorAll('.hours-row').forEach(r=>{
+    if(parseInt(r.getAttribute('data-day'),10) === today){
+      r.classList.add('today');
+    }
+  });
+})();
+
+</script>
+</body>
+</html>
